@@ -5,6 +5,8 @@ pub struct SchedulerWorker {
     base_path: String,
     job_metadata: SchedulerWorkerMetadata,
     comand: Vec<String>,
-    db_connection: DbConection, 
     dependencie: Dependencie
+}
+
+pub trait CuntinuouslyWorkerInterface{
 }

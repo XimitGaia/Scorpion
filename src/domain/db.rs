@@ -1,3 +1,8 @@
+pub struct Db {
+    db_connection: String,
+    db_type: String,
+}
+
 pub trait DbInterface {
     pub fn set_connection();
     fn get_connection();

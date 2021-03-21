@@ -5,5 +5,7 @@ pub struct ContinuouslyWorker {
     base_path: String,
     job_metadata: ContinuouslyWorkerMetadata,
     comand: Vec<String>,
-    db_connection: DbConection, 
+}
+
+pub trait CuntinuouslyWorkerInterface{
 }

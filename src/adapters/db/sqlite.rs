@@ -1,13 +1,18 @@
 #[path = "../../domain/db.rs"] mod {Db, DbInterface};
 
+mod domain;
+use std::path::Path;
+
 
 impl DbInterface for Db as Sqlite {
-    fn get_connection();
-    fn set_connection(&self, connection) {
-
-    }
-    fn query();
-    fn create_entity();
-    fn delete_entity();
-    fn update_entity();
+    fn start(&self){
+        let path = Path::new(format!("../../databases/{}", self.hash));
+        self.db_connection =  sqlite::open(path).unwrap();
+    },
+    // fn query(&self);
+    // fn create_entity(&self);
+    // fn delete_entity(&self);
+    // fn update_entity(&self);
 }
+
+

@@ -1,13 +1,12 @@
 pub struct Db {
     db_connection: String,
-    db_type: String,
+    hash: String
 }
 
 pub trait DbInterface {
-    pub fn set_connection();
-    fn get_connection();
-    pub fn query();
-    pub fn create_entity();
-    pub fn delete_entity();
-    pub fn update_entity();
+    fn start(&self);
+    // pub fn query(&self);
+    // pub fn create_entity(&self);
+    // pub fn delete_entity(&self);
+    // pub fn update_entity(&self);
 }

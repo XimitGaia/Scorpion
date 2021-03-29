@@ -1,6 +1,6 @@
-pub struct Db {
-    db_connection: String,
-    hash: String
+pub struct Db<String> {
+    pub hash: String,
+    pub db_connection: sqlite::Connection
 }
 
 pub trait DbInterface {
